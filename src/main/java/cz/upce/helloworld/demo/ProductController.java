@@ -1,10 +1,8 @@
 package cz.upce.helloworld.demo;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +18,7 @@ public class ProductController {
 
   @GetMapping("/product")
   public List<ProductModel> listProducts() {
-    logger.info("List product endpoint has been touched!");
+    logger.info("List product start");
     return productService.listProducts();
   }
 

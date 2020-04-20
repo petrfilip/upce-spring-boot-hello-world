@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Profile("heroku")
 @Service
+@Profile("heroku")
 public class ProductServiceHeroku implements ProductService {
 
   @Override

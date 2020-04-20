@@ -1,6 +1,7 @@
 package cz.upce.helloworld.demo;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasSize;
 
 import java.util.List;
 import org.junit.jupiter.api.Test;
@@ -15,11 +16,12 @@ class DemoApplicationTests {
   @Autowired
   private ProductServiceHeroku productService;
 
+
   @Test
   void contextLoads() {
     List<ProductModel> productModels = productService.listProducts();
-    assertThat(productService).isNotNull();
-    System.out.println(productModels.size());
+    assertThat(productModels, hasSize(3));
   }
+
 
 }
